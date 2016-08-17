@@ -65,7 +65,7 @@ alltestnames = creat_suite()
 #     testunit.addTest(unittest.makeSuite(test))
 
 
-now = time.strftime("%m-%M-%H_%M", time.localtime(time.time()))
+now = time.strftime("%m-%d-%H_%M", time.localtime(time.time()))
 
 filename = 'D:\\Practice\\Python+Selenium\\report\\' + now + 'result.html'
 fp = file(filename, 'wb')
