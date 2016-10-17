@@ -19,8 +19,8 @@ from email.mime.image import MIMEImage
 # 定义发送邮件
 def sentmail(file_new):
 
-    mail_from='1157088130@qq.com' #发信邮箱
-    mail_to = '409365364@qq.com'    # 收信邮箱
+    mail_from='xxxxxx@qq.com' #发信邮箱
+    mail_to = 'xxxxxx@qq.com'    # 收信邮箱
     f = open(file_new, 'rb')      # 定义正文
     mail_body = f.read()
     f.close()
@@ -29,7 +29,7 @@ def sentmail(file_new):
     msg['date'] = time.strftime('%a, %d %b %Y %H:%M:%S %z')  # 定义发送时间（不定义的可能有的邮件客户端会不显示发送时间）
     smtp = smtplib.SMTP()
     smtp.connect('smtp.qq.com')  # 连接 SMTP 服务器，此处用的qq的 SMTP 服务器
-    smtp.login('1157088130@126.com', 'www.0928.com.cn')       # 用户名密码
+    smtp.login('xxxxxx@126.com', 'xxxxxx')       # 用户名密码
     smtp.sendmail(mail_from, mail_to, msg.as_string())
     smtp.quit()
     print 'email has send out !'
